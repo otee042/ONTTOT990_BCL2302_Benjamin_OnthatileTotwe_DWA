@@ -21,6 +21,7 @@ form.addEventListener("submit", (event) => {
   //if user's input is a negative number or an integer
   else if (dividend < 0 || divider < 0) {
     result.innerText = "Division not performed. Invalid number provided. Try again"
+    console.error("Division not performed. Invalid number provided. Try again")
   }
   // If the output is a decimal it will set it to a whole number
   else result.innerText = Math.floor(wholenumber)
