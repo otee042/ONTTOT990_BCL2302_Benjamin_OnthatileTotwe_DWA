@@ -17,6 +17,9 @@ let matches = books; // List of books that match the search filters
  * @param {string} book.title - The title of the book.
  * @returns {HTMLButtonElement} The created button element.
  */
+
+//this function takes a book object and create a button element representing the book
+//Uses the provided properties to construct the HTML structure of the button element including image and some text  then returns the created elemnt
 const createButtonElement = ({ author, id, image, title }) => {
   const element = document.createElement('button');
   element.classList = 'preview';
@@ -34,7 +37,8 @@ const createButtonElement = ({ author, id, image, title }) => {
 };
 
 
-  //Initializes the starting list of book items.
+  //Initializes the starting list of book items. And also creates a document fragment
+  //Which will hold the buttons for the initial boooks then append them to the fragment
  
 const initializeList = () => {
   const starting = document.createDocumentFragment();
@@ -52,6 +56,7 @@ const initializeList = () => {
  * @param {string} text - The text of the option.
  * @returns {HTMLOptionElement} The created option element.
  */
+
 const createOptionElement = (value, text) => {
   const element = document.createElement('option');
   element.value = value;
@@ -64,6 +69,8 @@ const createOptionElement = (value, text) => {
  * @param {Object} data - The data object containing genres or authors.
  * @param {string} container - The name of the container (genres or authors).
  */
+
+
 const createOptions = (data, container) => {
   const fragment = document.createDocumentFragment();
   fragment.appendChild(createOptionElement('any', `All ${container}`));
@@ -76,6 +83,7 @@ const createOptions = (data, container) => {
 createOptions(genres, 'genres');
 createOptions(authors, 'authors');
 
+//Created variables that handles the settings theme which select it by its attribute
 const settingsTheme = document.querySelector('[data-settings-theme]');
 const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 settingsTheme.value = prefersDarkMode ? 'night' : 'day';
