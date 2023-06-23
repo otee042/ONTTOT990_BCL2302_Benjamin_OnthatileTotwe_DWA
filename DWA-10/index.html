@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.5.0/cdn/themes/light.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.5.0/cdn/themes/light.css" />
     <link rel="stylesheet" href="/DWA-10/styles.css" >
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.5.0/cdn/shoelace-autoloader.js"></script>
     <script src="/DWA-10/script.js" defer type="module"></script>
@@ -15,15 +15,14 @@
             Tally Count
         </h1>
     </header>
-    <main class="counter">
-        <input class="=counter_value" data-key="number" readonly value="0">
-
-        <div class="counter_actions">
-            <sl-button data-key="subtract" class="counter_button counter_button_first">-</sl-button>
-
-            <sl-button data-key="add" class="counter_button">+</sl-button>
-
-            <sl-button data-key="reset" class="counter_button">Reset</sl-button>
+    <main>
+        <div>
+            <input data-key="number" readonly value="0">
+        </div>
+        <div class="button">
+            <sl-button variant="default" outline data-key="subtract">-</sl-button>
+            <sl-button variant="primary" outline data-key="add">+</sl-button>
+            <sl-button variant="danger" outline data-key="reset">Reset</sl-button>
         </div>
     </main>
     <footer class="footer">
@@ -32,4 +31,4 @@
     </footer>
     
 </body>
-</html> 
+</html>
