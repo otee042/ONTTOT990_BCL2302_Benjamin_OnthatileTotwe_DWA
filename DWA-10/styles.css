@@ -25,7 +25,7 @@ input{
 }
 
 .button{
-padding: 10px;
+padding: 20px;
 background: none;
 display: flex;
 justify-content: space-evenly;
