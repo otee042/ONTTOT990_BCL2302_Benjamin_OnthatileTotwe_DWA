@@ -2,11 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tally count</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" href="css/stylesheet.css">
-<script src="/DWA-11/store.js" defer type="module"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.5.0/cdn/themes/light.css" />
+    <link rel="stylesheet" href="/DWA-10/styles.css" >
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.5.0/cdn/shoelace-autoloader.js"></script>
+    <script src="/DWA-11/store.js" defer type="module"></script>
+    <title>DWA-11</title>
 </head>
+<body>
+    <header class="header">
+        <h1 class="header_title">
+            Tally Count
+        </h1>
+    </header>
+    <main>
+        <div>
+            <input data-key="number" readonly value="0">
+        </div>
+        <div class="button">
+            <sl-button variant="default" outline data-key="subtract">-</sl-button>
+            <sl-button variant="primary" outline data-key="add">+</sl-button>
+            <sl-button variant="danger" outline data-key="reset">Reset</sl-button>
+        </div>
+    </main>
+    <footer class="footer">
+        Inspired by <a class="footer_link" href="https://tallycount.app/
+        ">Tally Count</a>. Note that this is merely a  student practice project for learning JavaScript.
+    </footer>
+    
+</body>
+</html>
